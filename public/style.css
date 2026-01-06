@@ -1,0 +1,215 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #5fe2ff 0%, #7beafe 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+}
+
+/* Header & Navigation */
+header {
+    background: linear-gradient(90deg, #ff7e5f 0%, #ff6b6b 100%);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+    padding: 30px;
+}
+
+/* Forms */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 28px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ff7e5f;
+}
+
+form {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+input, button {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff7e5f;
+    box-shadow: 0 0 0 3px rgba(255, 126, 95, 0.1);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(90deg, #ff7e5f 0%, #ff6b6b 100%);
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 126, 95, 0.3);
+}
+
+/* Links */
+a {
+    color: #ff7e5f;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6b6b;
+    text-decoration: underline;
+}
+
+/* Login/Signup Links */
+.auth-links {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.auth-links a {
+    color: #ff7e5f;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: white;
+    margin: 0 5px;
+    border: 2px solid #ddd;
+}
+
+.auth-links a:hover {
+    background: #ff7e5f;
+    color: white;
+    border-color: #ff7e5f;
+    text-decoration: none;
+}
+
+/* Task Table */
+h3 + table {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+th {
+    background: linear-gradient(90deg, #5ff2ff 0%, #6bdfff 100%);
+    color: white;
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+tr:hover {
+    background: #f8f9fa;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Action Links in Table */
+td a {
+    background: #4a90e2;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    min-width: 80px;
+}
+
+td a:hover {
+    background: #357ae8;
+    transform: translateY(-1px);
+    text-decoration: none;
+}

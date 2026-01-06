@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/style.css">
+
+<a href="/index">Dashboard</a> 
+<a href="/profile">Profile</a> 
+<a href="/logout">Logout</a>
+
+<h3>Add Task</h3>
+     <form method="post" action="/add-task">
+<input name="title" placeholder="Title"><br>
+           <input name="description" placeholder="Description"><br>
+<input type="date" name="date"><br>
+
+<button>Add</button>
+</form>
+
+<h3>Task List</h3>
+<table border="1">
+     <tr> 
+    <th>Title</th>
+    <th>Date</th>
+    <th>Action</th>
+</tr>
+<% tasks.forEach(t=>{ %>
+<tr>
+<td><%= t.title %></td>
+<td><%= t.date %></td>
+
+<td><a href="/delete/<%=t._id%>">Delete</a></td>
+</tr>
+<% }) %>
+</table>
