@@ -53,7 +53,7 @@ app.get("/logout",(req,res)=>{
 });
 
 // yaha dashboard pr crud ke liye routes banaye hai jaha se hum tasks ko add kar sakte hai ,
-// delete kar sakte hai;
+
 app.get("/index", async (req,res)=>{
         if(!req.session.userId) return res.redirect("/");
   const tasks = await Task.find({user:req.session.userId});
@@ -65,6 +65,22 @@ app.post("/add-task", async (req,res)=>
          await Task.create({
     ...req.body,
     user:req.session.userId
+  });
+  res.redirect("/index");
+});
+// yaha pr task ko edit karne ke liye routes banaye hai
+app.get("/edit/:id", async (req,res)=>{
+  if(!req.session.userId) return res.redirect("/");
+  
+  const task = await Task.findById(req.params.id);
+  res.render("edit",{task});
+});
+
+app.post("/edit/:id", async (req,res)=>{
+  await Task.findByIdAndUpdate(req.params.id, {
+    title: req.body.title,
+    description: req.body.description,
+    date: req.body.date
   });
   res.redirect("/index");
 });
