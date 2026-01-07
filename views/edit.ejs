@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/style.css">
+<h2>Edit Task</h2>
+
+<form method="post" action="/edit/<%= task._id %>">
+
+<input name="title" value="<%= task.title %>"><br>
+<textarea name="description"><%= task.description %></textarea>
+<br>
+<input type="date" name="date" value="<%= task.date %>"><br>
+
+<button>Update</button>
+</form>
+
+<a href="/index">Back</a>
